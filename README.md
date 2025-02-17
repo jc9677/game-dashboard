@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Game Collection Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based landing page that showcases a collection of web-based games. This project serves as a central hub for accessing various games hosted on GitHub Pages.
 
-## Available Scripts
+## Current Games
 
-In the project directory, you can run:
+- [W🌎RLDle](https://jc9677.github.io/worldle/) - A geography-based word guessing game
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Responsive card-based layout
+- Smooth animations and transitions
+- Mobile-friendly design
+- Easy navigation to different games
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Development
 
-### `npm test`
+This project uses React with TypeScript. To run the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm start
+```
 
-### `npm run build`
+The development server will start on port 3000 (or another available port if 3000 is in use).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is configured for GitHub Pages deployment. To deploy:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Ensure the `homepage` field in `package.json` points to your GitHub Pages URL
+2. Run the deployment command:
+```bash
+npm run deploy
+```
 
-### `npm run eject`
+This will build the project and push it to the `gh-pages` branch of your repository.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Adding New Games
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To add new games to the collection:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Open `src/App.tsx`
+2. Add a new entry to the `games` array:
+```typescript
+{
+  title: "Game Name",
+  url: "https://your-game-url.com",
+  description: "Brief description of the game"
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing
 
-## Learn More
+Feel free to contribute by:
+- Adding new games to the collection
+- Improving the UI/UX
+- Fixing bugs or issues
+- Suggesting new features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT License - feel free to use this project as a template for your own game collection.
